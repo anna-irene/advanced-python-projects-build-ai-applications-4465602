@@ -1,3 +1,10 @@
+> ⚠️ This is a fork of [original repository](https://github.com/honeypadre/advanced-python-projects-build-ai-applications-4465602).  
+> I made improvements to the file `begin/temp/CH_1_NLP_Chatbot.py` as part of my learning from the LinkedIn course:  
+> **“Advanced Python Projects: Build AI Applications” by [Priya Mohan](https://www.linkedin.com/learning/instructors/priya-mohan)**.  
+> 👉 See [My Contributions](#my-contributions) below for details.
+
+
+
 # Advanced Python Projects: Build AI Applications
 This is the repository for the LinkedIn Learning course `Advanced Python Projects: Build AI Applications`. The full course is available from [LinkedIn Learning][lil-course-url].
 
@@ -24,4 +31,22 @@ Please follow me on LinkedIn: https://www.linkedin.com/in/priya123mohan
 
 [lil-course-url]: https://www.linkedin.com/learning/advanced-python-projects-build-ai-applications
 [lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQHIPR3VAGQGiQ/learning-public-crop_675_1200/0/1713466120470?e=2147483647&v=beta&t=on84QImWhMSkQjBq4E8OiW9BuJeJ7vP_Np1ZmCkhtzo
+
+
+---
+
+## My Contributions
+
+📄 **Modified File**: `begin/temp/CH_1_NLP_Chatbot.py`  
+📁 **Original Version**: `finish/temp/CH_1_NLP_Chatbot.py`
+
+### ✅ Enhancements:
+- Added a user-friendly **exit option** to allow quitting with “bye”, “exit”, or “quit”.
+- Implemented **empty input handling** so the chatbot prompts the user instead of staying silent.
+- Included **manual sentiment override** using predefined positive/negative keyword lists for more accurate emotional responses.
+
+🧠 These changes were made while following the course  
+**“Advanced Python Projects: Build AI Applications” by [Priya Mohan](https://www.linkedin.com/learning/instructors/priya-mohan)** on LinkedIn Learning.
+
+
 
