@@ -1,35 +1,45 @@
-# Importing TextBlob to help the chatbot understand language nuances.
 from textblob import TextBlob
 
-
-# Defining the ChatBot class for interaction.
 class ChatBot:
     def __init__(self):
-        # Initializing the sentiment analysis tool.
         self.sentiment_analyzer = TextBlob("")
+        self.negative_keywords = {
+            "hurt", "pain", "sad", "angry", "depressed", "anxious",
+            "frustrated", "crying", "suffering", "terrible"
+        }
+        self.positive_keywords = {
+            "happy", "joy", "excited", "love", "grateful", "amazing",
+            "fantastic", "awesome", "great", "wonderful"
+        }
 
     def start_chat(self):
         print("ChatBot: Hi, how can I help you?")
         while True:
             user_message = input("You: ").strip()
+            if not user_message:
+                print("ChatBot: Please say something.")
+                continue
+            if user_message.lower() in {"bye", "exit", "quit"}:
+                print("ChatBot: Goodbye! Take care!")
+                break
 
-            # Analyzing the sentiment of the user's message.
             self.sentiment_analyzer = TextBlob(user_message)
             sentiment_score = self.sentiment_analyzer.sentiment.polarity
 
-            # Generating the chatbot's response based on sentiment.
-            if sentiment_score > 0:
-                chatbot_message = f"ChatBot: That's great to hear! \n Sentiment score: {sentiment_score}\n"
-            elif sentiment_score < 0:
-                chatbot_message = f"ChatBot: I'm sorry to hear that. \n Sentiment score: {sentiment_score}\n"
-            else:
-                chatbot_message = f"ChatBot: Hmm, I see. \n Sentiment score: {sentiment_score}\n"
+            lower_message = user_message.lower()
+            if any(w in lower_message for w in self.negative_keywords):
+                sentiment_score = -1.0
+            elif any(w in lower_message for w in self.positive_keywords):
+                sentiment_score = 1.0
 
-            # Printing the chatbot's response and sentiment.
+            if sentiment_score > 0.10:
+                chatbot_message = f"ChatBot: That's great to hear! 😊\nSentiment score: {sentiment_score}\n"
+            elif sentiment_score < -0.10:
+                chatbot_message = f"ChatBot: I'm sorry to hear that. What can I do to help? 😔\nSentiment score: {sentiment_score}\n"
+            else:
+                chatbot_message = f"ChatBot: Hmm, I see. Tell me more. 😐\nSentiment score: {sentiment_score}\n"
+
             print(chatbot_message)
 
-
 if __name__ == "__main__":
-    # Creating the chatbot and starting the chat loop.
-    chatbot = ChatBot()
-    chatbot.start_chat()
+    ChatBot().start_chat()
