@@ -1,7 +1,7 @@
-> ⚠️ This is a fork of [original repository](https://github.com/honeypadre/advanced-python-projects-build-ai-applications-4465602).  
+>  This is a fork of [Advanced python projects : Build AI applications-4465602](https://github.com/honeypadre/advanced-python-projects-build-ai-applications-4465602).  
 > I made improvements to the file `begin/temp/CH_1_NLP_Chatbot.py` as part of my learning from the LinkedIn course:  
 > **“Advanced Python Projects: Build AI Applications” by [Priya Mohan](https://www.linkedin.com/learning/instructors/priya-mohan)**.  
-> 👉 See [My Contributions](#my-contributions) below for details.
+>  See [Chatbot with Sentiment Analysis](#chatbot-with-sentiment-analysis) below for details.
 
 
 
@@ -35,17 +35,36 @@ Please follow me on LinkedIn: https://www.linkedin.com/in/priya123mohan
 
 ---
 
+## Chatbot with Sentiment Analysis
+
+This is a simple terminal-based chatbot that uses sentiment analysis to understand and respond to user emotions. Built with Python and [TextBlob](https://textblob.readthedocs.io/en/dev/), it simulates empathetic responses based on the mood of the message.
+
+---
+
 ## My Contributions
 
-📄 **Modified File**: `begin/temp/CH_1_NLP_Chatbot.py`  
-📁 **Original Version**: `finish/temp/CH_1_NLP_Chatbot.py`
+**Modified File**: `begin/temp/CH_1_NLP_Chatbot.py`  
+**Original Version**: `finish/temp/CH_1_NLP_Chatbot.py`
 
-### ✅ Enhancements:
+###  Enhancements:
 - Added a user-friendly **exit option** to allow quitting with “bye”, “exit”, or “quit”.
 - Implemented **empty input handling** so the chatbot prompts the user instead of staying silent.
 - Included **manual sentiment override** using predefined positive/negative keyword lists for more accurate emotional responses.
 
-🧠 These changes were made while following the course  
+  
+## Sample Interaction
+bash
+```
+ChatBot: Hi, how can I help you?
+You: I'm hurt
+ChatBot: I'm sorry to hear that. What can I do to help? 😔
+Sentiment score: -1.0
+
+You: Actually I'm feeling awesome now!
+ChatBot: That's great to hear! 😊
+Sentiment score: 1.0
+```
+These changes were made while following the course  
 **“Advanced Python Projects: Build AI Applications” by [Priya Mohan](https://www.linkedin.com/learning/instructors/priya-mohan)** on LinkedIn Learning.
 
 
